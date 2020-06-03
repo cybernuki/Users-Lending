@@ -10,6 +10,7 @@ import SignUpPage from '../Register';
 import HomePage from '../Home'
 
 import * as ROUTES from '../../constants/routes.js';
+import "./app.css"
 
 
 const App = () => (
