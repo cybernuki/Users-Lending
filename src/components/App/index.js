@@ -8,6 +8,7 @@ import Navigation from '../Navigation'
 import SignInPage from '../Login';
 import SignUpPage from '../Register';
 import HomePage from '../Home'
+import DashboardPage from '../Dashboard'
 
 import * as ROUTES from '../../constants/routes.js';
 
@@ -22,6 +23,8 @@ const App = () => (
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
+      <Route path={ROUTES.DASHBOARD} component={DashboardPage} />
+
 
     </div>
   </Router>
