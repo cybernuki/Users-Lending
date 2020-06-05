@@ -11,6 +11,7 @@ import HomePage from '../Home'
 import DashboardPage from '../Dashboard'
 
 import * as ROUTES from '../../constants/routes.js';
+import "./app.css"
 
 
 const App = () => (
