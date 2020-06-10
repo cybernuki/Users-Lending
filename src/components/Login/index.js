@@ -1,84 +1,55 @@
-import React, { Component } from "react";
-import { withRouter } from 'react-router-dom';
-import { MDBContainer, MDBRow, MDBCol, MDBInput } from 'mdbreact';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
+import React, { useState } from "react";
+import { useAppContext } from "../Auth";
+import { login } from "../../_helpers/helpers.auth";
+import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import "./Login.css";
 
-const SignUpPage = () => (
-  <div>
-    <p className="h5 text-center mb-4">Ingresar</p>
-    <SignUpForm />
-  </div>
-);
+export default function Login() {
+  const { userHasAuthenticated } = useAppContext();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-
-const INITIAL_STATE = {
-  email: '',
-  password: ''
-};
-class SignUpFormBase extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { ...INITIAL_STATE };
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
   }
 
-  onSubmit = event => {
-    const { email, password } = this.state;
-    console.log(email, password)
+  async function handleSubmit(event) {
     event.preventDefault();
-  };
+    try {
+      let logged = await login(email, password)
+      if (logged === 'ok') {
+        userHasAuthenticated(true);
+      }
 
-  onChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  render() {
-    const {
-      email,
-      password,
-    } = this.state;
-
-
-    const isInvalid =
-      email === '' ||
-      password === '';
-
-    return (
-      <MDBContainer>
-        <MDBRow>
-          <MDBCol md="6">
-            <form onSubmit={this.onSubmit}>
-              <div className="grey-text">
-
-              </div>
-              <MDBInput label="Email" icon="envelope" group type="email" validate error="wrong" success="right"
-                name="email"
-                value={email}
-                onChange={this.onChange}
-                placeholder="Email Address"
-              />
-              <MDBInput label="Contraseña" icon="lock" group type="password" validate error="wrong" success="right"
-                name="password"
-                value={password}
-                onChange={this.onChange}
-
-                placeholder="Password"
-              />
-              <button color="info" disabled={isInvalid} type="submit">
-                Sign Up
-        </button>
-            </form>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-    );
+    } catch (error) {
+      console.error(error)
+    }
   }
+
+  return (
+    <div className="Login">
+      <form onSubmit={handleSubmit}>
+        <FormGroup controlId="email" bsSize="large">
+          <FormLabel>Email</FormLabel>
+          <FormControl
+            autoFocus
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </FormGroup>
+        <FormGroup controlId="password" bsSize="large">
+          <FormLabel>Password</FormLabel>
+          <FormControl
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            type="password"
+          />
+        </FormGroup>
+        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+          Login
+        </Button>
+      </form>
+    </div>
+  );
 }
-
-const SignUpForm = withRouter(SignUpFormBase);
-
-export default SignUpPage;
-
-export { SignUpForm };
