@@ -67,7 +67,7 @@ const HomePage = () => (
               <div className="fotoH"></div>
               <Card.Title className="center">Felipe Cubillos</Card.Title>
               <Card.Text className="center">
-                me gusto el proyecto porque el problema que se presentó me ayudará a crecer como desarrollador
+                Me gusto el proyecto porque el problema que se presentó me ayudará a crecer como desarrollador
               </Card.Text>
             </Card.Body>
             <Card.Footer className="center">              
