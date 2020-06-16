@@ -1,0 +1,100 @@
+.inicio{
+  background-color: #33b5e5;
+  height: 550px;
+}
+
+.moto {
+  background-image: url(./images/moto.png);
+}
+
+.fotoD {
+  background-image: url(./images/foto-danny.jpg);
+  background-size: 100px;
+  width:100px;
+  height:100px;
+  border-radius:150px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.fotoP {
+  background-image: url(./images/foto-punpun.jpeg);
+  background-size: 100px;
+  width:100px;
+  height:100px;
+  border-radius:150px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.fotoH {
+  background-image: url(./images/foto-happy.jpg);
+  background-size: 100px;
+  width:100px;
+  height:100px;
+  border-radius:150px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.fotoJP {
+  background-image: url(./images/foto-portilla.jpg);
+  background-size: 100px;
+  width:100px;
+  height:100px;
+  border-radius:150px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.tittle{
+  font-size: 60px;
+  color: aliceblue;
+  text-align: inherit;
+  position: relative;
+  top: 20%;
+}
+
+.footer{
+  padding-bottom: 40px;
+  padding-top: 40px;
+  margin-top: 80px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  background-color: #f7f7f7;
+}
+
+.links{
+  font-size: 30px;
+  margin: 5%;
+  text-align: center;
+  color: black;
+}
+
+.center{
+  text-align: center;
+}
+
+.size {
+      height: 500px;
+}
+
+.h1{
+  font-size: 40px;
+  letter-spacing: -.5px;
+  line-height: 52px;
+  position: relative;
+  top: 30%;
+}
+
+.p{
+  font-size: 18px;
+  line-height: 28px;
+  position: relative;
+  top: 30%;
+}
+
+.icons{
+  font-size: 200px;
+  text-align: center;
+  margin-top: 5%;
+}
