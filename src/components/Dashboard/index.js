@@ -1,30 +1,64 @@
 import React from 'react'
-import { Card, ProgressBar, Container, Row, Col } from 'react-bootstrap';
-let now = 10
-const DashboardPage = () => (
-  <>
-  <Container>
-  <Row>
-    <Col md="auto">
-    <Card style={{ width: '30rem' }}>
-      <Card.Header>Cola</Card.Header>
-      <Card.Body>
-        <Card.Title>Numero en cola: 2</Card.Title>
-      </Card.Body>
-    </Card>
-    </Col>
-    <Col md="auto">
-    <Card style={{ width: '30rem' }}>
-      <Card.Header>Dinero reunido</Card.Header>
-      <Card.Body>
-        <Card.Title>Dinero reunido: {now}/3000000</Card.Title>
-        <ProgressBar now={now} label={`${now}%`} />
-      </Card.Body>
-    </Card>
-    </Col>
-  </Row>
-  </Container>
-</>
-)
+import { Card, ProgressBar, Container, Row, Col, CardDeck } from 'react-bootstrap';
 
-export default DashboardPage
+class DashboardPage extends React.Component {
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      amount: '',
+      status: '',
+    };
+  }
+ 
+  componentDidMount() {
+    fetch('https://userslending-backend.glitch.me/api/v1/aspirants/aspirant1')
+    .then((response) => {
+      return response.json()
+    })
+    .then((aspirants) => {
+      this.setState({ 
+        amount: aspirants.fund.amount,
+        status: aspirants.fund.status
+       })
+    })
+  }
+
+  render() {
+    return (
+      <>
+      <Container>
+      <Row className="justify-content-md-center footer">
+          <Col md="10">
+            <CardDeck>
+              <Card>
+                <Card.Body>
+                  <Card.Title >Estado</Card.Title>
+                  <Card.Text >
+                    {this.state.status}
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer >              
+                </Card.Footer>
+              </Card>
+              <Card>
+                <Card.Body>
+                  <Card.Title >Dinero reunido</Card.Title>
+                  <Card.Text >
+                    Dinero reunido: {this.state.amount}/3500000
+                    <ProgressBar now={(this.state.amount*100)/3500000} />
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                </Card.Footer>
+              </Card>
+            </CardDeck>
+          </Col>
+        </Row>
+      </Container>
+    </>
+    );
+  }
+}
+
+export default DashboardPage;
