@@ -28,7 +28,7 @@ class DashboardPage extends React.Component {
     return (
       <>
       <Container>
-      <Row className="justify-content-md-center footer">
+      <Row className="justify-content-md-center">
           <Col md="10">
             <CardDeck>
               <Card>
