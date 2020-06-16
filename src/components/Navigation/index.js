@@ -14,7 +14,6 @@ const NoLogged = () => (
         </Nav>
         <Form inline>
           <Button variant="outline-info"><Link to={ROUTE.SIGN_IN}>Ingresar</Link></Button>
-          <Button variant="info"><Link to={ROUTE.SIGN_UP} className="link">Registrar</Link></Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
