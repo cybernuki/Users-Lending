@@ -18,13 +18,13 @@ export default function Login() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      let logged = await login(email, password)
-      if (logged === 'ok') {
+      let [status, id] = await login(email, password)
+      if (status === 'ok') {
         userHasAuthenticated(true);
-        localStorage.setItem('tokenId', 'Happy');
+        localStorage.setItem('tokenId', id);
         history.push("/dashboard");
       } else {
-        alert(logged)
+        alert(status)
       }
     } catch (error) {
       console.error(error)

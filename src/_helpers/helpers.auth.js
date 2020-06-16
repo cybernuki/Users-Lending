@@ -14,8 +14,9 @@ const login = async (email, password) => {
 
   try {
     const response = await axios.post('https://userslending-backend.glitch.me/api/v1/aspirants', data, options);
-    //return [response.data.status, ];
-    console.log(response.data)
+    let status = response.data.status
+    let id = response.data.aspirant.storeKeeperId
+    return [status, id];
   } catch (error) {
     console.log(error);
   }
