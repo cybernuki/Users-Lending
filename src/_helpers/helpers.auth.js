@@ -13,8 +13,10 @@ const login = async (email, password) => {
   }
 
   try {
-    const response = await axios.post('http://localhost:3001/api/v1/aspirants', data, options);
-    return response.data.status;
+    const response = await axios.post('https://userslending-backend.glitch.me/api/v1/aspirants', data, options);
+    let status = response.data.status
+    let id = response.data.aspirant.storeKeeperId
+    return [status, id];
   } catch (error) {
     console.log(error);
   }
