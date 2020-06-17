@@ -1,6 +1,6 @@
 const axios = require('axios').default
 
-const login = async (email, password) => {
+export const login = async (email, password) => {
   const data = {
     'email': email,
     'password': password,
@@ -21,5 +21,3 @@ const login = async (email, password) => {
     console.log(error);
   }
 }
-
-module.exports = { login }
