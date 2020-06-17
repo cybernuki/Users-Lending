@@ -14,7 +14,7 @@ const HomePage = () => (
       <Col md="6" className="center">
         <h1 className="h1">Acceder a prestamos</h1>
         <p className="p">
-          el usuario tendra la posibilidad de acceder a un prestamo simplemente ingresando el 
+          el usuario tendra la posibilidad de acceder a un prestamo simplemente ingresando el
           email y contraseña de rappi que tiene
         </p>
       </Col>
@@ -38,11 +38,11 @@ const HomePage = () => (
               <div className="fotoD"></div>
               <Card.Title className="center">Danny Martinez</Card.Title>
               <Card.Text className="center">
-                Tome este proyecto debido a que me parecio un gran reto 
+                Tome este proyecto debido a que me parecio un gran reto
                 personal para crecer como desarrollador a demas de fortalecer mis habilidades como fron-end developer
               </Card.Text>
             </Card.Body>
-            <Card.Footer className="center">              
+            <Card.Footer className="center">
               <a href="https://github.com/danny099" className="links"><MDBIcon fab icon="github" /></a>
               <a href="https://twitter.com/dalmariv01" className="links"><MDBIcon fab icon="twitter" /></a>
               <a href="https://www.linkedin.com/in/danny-alejandro-martinez-rivera-72b470192/" className="links"><MDBIcon fab icon="linkedin-in" /></a>
@@ -56,9 +56,9 @@ const HomePage = () => (
                 Me emocionó la idea de afrontar un reto tan grande y más el hecho de que es un problema real que posiblemente ayudé a muchas personas a conseguir trabajo
               </Card.Text>
             </Card.Body>
-            <Card.Footer className="center">              
+            <Card.Footer className="center">
               <a href="https://github.com/cybernuki" className="links"><MDBIcon fab icon="github" /></a>
-              <a href="https://twitter.com/cybernuki" className="links"><MDBIcon fab icon="twitter" /></a>
+              <a href="https://twitter.com/ookanuki" className="links"><MDBIcon fab icon="twitter" /></a>
               <a href="https://www.linkedin.com/mwlite/in/jhonatan-arenas-24473718b" className="links"><MDBIcon fab icon="linkedin-in" /></a>
             </Card.Footer>
           </Card>
@@ -70,7 +70,7 @@ const HomePage = () => (
                 Me gusto el proyecto porque el problema que se presentó me ayudará a crecer como desarrollador
               </Card.Text>
             </Card.Body>
-            <Card.Footer className="center">              
+            <Card.Footer className="center">
               <a href="https://github.com/FeliPrado31" className="links"><MDBIcon fab icon="github" /></a>
               <a href="https://twitter.com/Feliprado2" className="links"><MDBIcon fab icon="twitter" /></a>
               <a href="https://www.linkedin.com/in/juan-felipe-cubillos-prado-312870180/" className="links"><MDBIcon fab icon="linkedin-in" /></a>
@@ -84,7 +84,7 @@ const HomePage = () => (
                 Vi en este proyecto la oportunidad de destacarme con una de las grandes empresas nacionales como lo es Rappi y de crecer en cuanto a mis conocimientos en DevOps y desarrollo de Apps para sustentar mis estudios realizados en Holberton School Cali
               </Card.Text>
             </Card.Body>
-            <Card.Footer className="center">              
+            <Card.Footer className="center">
               <a href="https://github.com/Jdpa357" className="links"><MDBIcon fab icon="github" /></a>
               <a href="https://twitter.com/JDavid357" className="links"><MDBIcon fab icon="twitter" /></a>
               <a href="https://www.linkedin.com/in/juan-david-portilla-alzate-536215177/" className="links"><MDBIcon fab icon="linkedin-in" /></a>
@@ -94,7 +94,7 @@ const HomePage = () => (
       </Col>
     </Row>
   </container>
-  
+
 );
 
 export default HomePage;

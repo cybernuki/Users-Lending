@@ -4,8 +4,8 @@
   <a href="https://twitter.com/JDavid357" target="_blank">
     <img alt="Twitter: JDavid357" src="https://img.shields.io/twitter/follow/JDavid357.svg?style=social" />
   </a>
-  <a href="https://twitter.com/cybernuki" target="_blank">
-    <img alt="Twitter: cybernuki" src="https://img.shields.io/twitter/follow/cybernuki.svg?style=social" />
+  <a href="https://twitter.com/ookanuki" target="_blank">
+    <img alt="Twitter: ookanuki" src="https://img.shields.io/twitter/follow/cybernuki.svg?style=social" />
   </a>
   <a href="https://twitter.com/feliprado2" target="_blank">
     <img alt="Twitter: feliprado2" src="https://img.shields.io/twitter/follow/feliprado2.svg?style=social" />
