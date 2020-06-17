@@ -8,6 +8,7 @@ import Navigation from '../Navigation'
 import SignInPage from '../Login';
 import SignUpPage from '../Register';
 import DashboardPage from '../Dashboard'
+import InvestorsPage from '../Investors'
 import HomePage from '../Home'
 import { AppContext } from '../Auth';
 
@@ -33,6 +34,7 @@ const App = () => {
 
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.DASHBOARD} component={DashboardPage} />
+        <Route path={ROUTES.INVESTORS} component={InvestorsPage} />
         <Route path={ROUTES.HOME} component={HomePage} />
         <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
