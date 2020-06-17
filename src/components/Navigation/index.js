@@ -7,7 +7,7 @@ import { Navbar, Nav, Form, Button } from 'react-bootstrap'
 
 const NoLogged = () => (
   <Navbar variant="light" expand="lg">
-    <Navbar.Brand ><Link to={ROUTE.HOME}>Home</Link>git </Navbar.Brand>
+    <Navbar.Brand ><Link to={ROUTE.HOME}>Home</Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
