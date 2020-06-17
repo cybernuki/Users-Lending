@@ -7,36 +7,39 @@ import { Navbar, Nav, Form, Button } from 'react-bootstrap'
 
 const NoLogged = () => (
   <Navbar variant="light" expand="lg">
-      <Navbar.Brand ><Link to={ROUTE.HOME}>Home</Link></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-        </Nav>
-        <Form inline>
-          <Button variant="outline-info"><Link to={ROUTE.SIGN_IN}>Ingresar</Link></Button>
-        </Form>
-      </Navbar.Collapse>
-    </Navbar>
-  )
+    <Navbar.Brand ><Link to={ROUTE.HOME}>Home</Link></Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+      </Nav>
+      <Form inline>
+        <Button variant="outline-info"><Link to={ROUTE.SIGN_IN}>Ingresar</Link></Button>
+      </Form>
+    </Navbar.Collapse>
+  </Navbar>
+)
 
-  const Logged = () => (
-    <Navbar variant="light" expand="lg">
+const Navigation = () => {
+  const { isAuthenticated, userHasAuthenticated } = useAppContext();
+
+  const Logout = () => {
+    userHasAuthenticated(false)
+    localStorage.removeItem('tokenId')
+  }
+  return (
+    isAuthenticated ?
+      <Navbar variant="light" expand="lg">
         <Navbar.Brand ><Link to={ROUTE.HOME}>Home</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
           </Nav>
           <Form inline>
-            <Button variant="outline-info"><Link to={ROUTE.DASHBOARD} >Dashboard</Link></Button>
+            <Button onClick={Logout} variant="outline-info"><Link to={ROUTE.HOME} >Logout</Link></Button>
           </Form>
         </Navbar.Collapse>
       </Navbar>
-    )
-
-const Navigation = () => {
-  const { isAuthenticated } = useAppContext();
-  return(
-    isAuthenticated ? <Logged/> : <NoLogged/>
+      : <NoLogged />
   )
 }
 
