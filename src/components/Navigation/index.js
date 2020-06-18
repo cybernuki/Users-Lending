@@ -4,10 +4,11 @@ import { useAppContext } from "../Auth";
 
 import * as ROUTE from '../../constants/routes'
 import { Navbar, Nav, Form, Button } from 'react-bootstrap'
+import { MDBIcon } from "mdbreact"
 
 const NoLogged = () => (
   <Navbar variant="light" expand="lg">
-    <Navbar.Brand ><Link to={ROUTE.HOME}>Home</Link></Navbar.Brand>
+    <Navbar.Brand ><Link to={ROUTE.HOME}><MDBIcon icon="home" /></Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
@@ -29,7 +30,7 @@ const Navigation = () => {
   return (
     isAuthenticated ?
       <Navbar variant="light" expand="lg">
-        <Navbar.Brand ><Link to={ROUTE.HOME}>Home</Link></Navbar.Brand>
+        <Navbar.Brand ><Link to={ROUTE.HOME}><MDBIcon icon="home" /></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
