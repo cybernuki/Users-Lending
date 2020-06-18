@@ -39,7 +39,7 @@ const HomePage = () => (
               <Card.Title className="center">Danny Martinez</Card.Title>
               <Card.Text className="center">
                 Tome este proyecto debido a que me parecio un gran reto
-                personal para crecer como desarrollador a demas de fortalecer mis habilidades como fron-end developer
+                personal para crecer como desarrollador a demas de fortalecer mis habilidades como front-end developer
               </Card.Text>
             </Card.Body>
             <Card.Footer className="center">
