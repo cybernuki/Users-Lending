@@ -17,7 +17,7 @@
 
 > Crowdlending App created by Holberton School students in collaboration with Rappi in order to fulfill a need for the company that consists of a platform in which Rappi workers can access to a loan from the investors to enhance the quality of the job they can offer to the users
 
-### 🏠 [Homepage](https://github.com/cybernuki/Users-Lending-Front)
+### 🏠 [Backend Part](https://github.com/cybernuki/Users-Lending-Back)
 
 ### ✨ [Demo](https://userslending-front.glitch.me/)
 
